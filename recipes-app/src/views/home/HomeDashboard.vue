@@ -5,7 +5,7 @@ import SearchBar from '../../components/search/SearchBar.vue'
 <template>
   <section class="dashboard container">
     <div class="dashboard-content">
-      <div>
+      <div class="search-heading">
         <h1>Search Your Recipe</h1>
       </div>
       <div>
@@ -15,10 +15,12 @@ import SearchBar from '../../components/search/SearchBar.vue'
   </section>
 </template>
 
-<style scoped>
-
+<style lang="scss" scoped>
+.search-heading{
+  margin-bottom: 20px
+}
 .dashboard-content {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 </style>

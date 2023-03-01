@@ -4,8 +4,8 @@ import { login } from '../../firebaseConfig'
 
 export default function useLoginUser() {
   const router = useRouter()
-  const email = ref('')
-  const password = ref('')
+  const email = ref('test@test.com')
+  const password = ref('testuser')
   const errorMessage = ref('')
 
   const firebaseLogin = () => {

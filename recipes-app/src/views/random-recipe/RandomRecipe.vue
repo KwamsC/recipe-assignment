@@ -1,5 +1,6 @@
 <script setup>
 import UseRandomRecipe from './UseRandomRecipe'
+import RecipeCard from '../../components/recipe/RecipeCard.vue'
 
 const { randomRecipe } = UseRandomRecipe()
 
@@ -8,13 +9,7 @@ const { randomRecipe } = UseRandomRecipe()
 <template>
   <div>
     <h1>Random meal of the day</h1>
-    <div class="recipe-card">
-      <img :src="randomRecipe.strMealThumb" :alt="randomRecipe.strMeal" class="recipe-image" />
-      <div class="recipe-content">
-        <h2 class="recipe-title">{{ randomRecipe.strMeal }}</h2>
-        <router-link :to="{ path: `/recipe/${randomRecipe.idMeal}` }">View Recipe</router-link>
-      </div>
-    </div>
+    <recipe-card :recipe="randomRecipe" />
   </div>
 </template>
 

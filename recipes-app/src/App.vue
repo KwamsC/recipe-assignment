@@ -13,6 +13,6 @@ import HeaderBar from './components/header/HeaderBar.vue'
 
 <style lang="scss" scoped>
 main {
-  padding-top: 5rem;
+  padding-top: 3rem;
 }
 </style>

@@ -6,9 +6,10 @@ const { input, recipes, search } = useSearchBar()
 </script>
 
 <template>
-  <div class="ui icon input">
+  <div class="search-input-container">
     <input
       type="text"
+      class=search-input
       aria-label="Search"
       v-model="input"
       @keyup="search"
@@ -25,7 +26,23 @@ const { input, recipes, search } = useSearchBar()
   </div>
 </template>
 
-<style>
+<style lang="scss">
+.search {
+  &-input-container{
+    margin-bottom: 1rem;
+  }
+
+  &-input {
+    border-radius: 1rem;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid grey;
+    min-width: 300px;
+  }
+
+  &-list{
+
+  }
+}
 .search-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

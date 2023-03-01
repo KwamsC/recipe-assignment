@@ -30,6 +30,11 @@ header.topbar {
   align-items: center;
 }
 
+.navbar {
+  display: inline-block;
+  text-align: end;
+}
+
 nav a.router-link-exact-active {
   color: var(--color-text);
 }

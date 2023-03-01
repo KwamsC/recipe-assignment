@@ -17,15 +17,6 @@ defineProps({
       </router-link>
     </div>
   </div>
-  <!-- <div>
-    {{ recipe.strMeal }}
-  </div> -->
-  <!-- <div v-if="fact">
-        detail
-    </div>
-    <div v-else>
-        loading
-    </div> -->
 </template>
 
 <style>
