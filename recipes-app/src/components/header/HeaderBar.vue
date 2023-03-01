@@ -50,5 +50,6 @@ nav a.router-link-exact-active {
 
 nav a {
   padding: 1rem;
+  color: black;
 }
 </style>

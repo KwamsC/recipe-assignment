@@ -7,33 +7,18 @@ const { randomRecipe } = UseRandomRecipe()
 </script>
 
 <template>
-  <div>
+  <div class="random-container">
     <h1>Random meal of the day</h1>
     <recipe-card :recipe="randomRecipe" />
   </div>
 </template>
 
-<style>
-.recipe-card {
-  background-color: #fff;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  border-radius: 5px;
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.356);
-}
-
-.recipe-content {
-  display: block;
-}
-
-.recipe-title {
-  color: black;
-}
-
-.recipe-image {
-  width: 300px;
-  /* height: 300px; */
-  border-radius: 5px 0 0 5px;
+<style lang="scss" scoped>
+.random-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 4rem;
+  align-items: center;
 }
 </style>

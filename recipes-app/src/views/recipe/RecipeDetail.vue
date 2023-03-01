@@ -19,7 +19,7 @@ const { recipe, ingredientsWithMeasures, goBack } = useRecipeDetail()
             {{ recipe.strTags }}
           </div>
           <div v-if="recipe.strYoutube">
-            <a :href="recipe.strYoutube"> Play instruction video</a>
+            <a :href="recipe.strYoutube" target="_blank" rel="noopener noreferrer"> Play instruction video</a>
           </div>
         </div>
         <div class="ingredients">
@@ -58,7 +58,7 @@ const { recipe, ingredientsWithMeasures, goBack } = useRecipeDetail()
 }
 
 .heading{
-  margin: 2rem 0;
+  margin: 1rem 0;
   font-weight: 800;
 }
 
@@ -81,9 +81,15 @@ const { recipe, ingredientsWithMeasures, goBack } = useRecipeDetail()
   box-shadow: 0 0 5px rgba(75, 75, 75, .07);
   z-index: 1;
 
+  &-media {
+    width: 100%;
+    height: 100%;
+  }
+
   &-title {
     font-size: 30px;
-    font-weight: 300;
+    font-weight: 600;
+    margin-bottom: 1rem
   }
 }
 

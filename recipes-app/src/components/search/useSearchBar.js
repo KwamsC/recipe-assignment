@@ -13,7 +13,7 @@ export default function useSearchBar() {
    * or an empty array if no matching recipes were found.
    */
   const returnSearchResults = async () => {
-    if (input.value.length >= 1) {
+    if (recipes.value && input.value.length >= 1) {
       recipes.value = await searchRecipe(input.value)
     } else {
       recipes.value = []

@@ -22,7 +22,7 @@ const { input, recipes, search } = useSearchBar()
     </li>
   </ul>
   <div v-else>
-    <p>No recepies found</p>
+    <p class="cooking-question">What are you cooking today?</p>
   </div>
 </template>
 
@@ -43,6 +43,13 @@ const { input, recipes, search } = useSearchBar()
 
   }
 }
+
+.cooking-question {
+  font-weight: 100;
+  font-style: italic;
+  font-size: 14px;
+}
+
 .search-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

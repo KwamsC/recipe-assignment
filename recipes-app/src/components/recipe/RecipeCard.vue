@@ -10,77 +10,68 @@ defineProps({
 <template>
   <div class="card">
     <img :src="recipe.strMealThumb" :alt="recipe.strMeal" class="recipe-image" />
-    <div class="container__text">
+    <div class="card-info">
       <h1>{{ recipe.strMeal }}</h1>
-      <router-link :to="{ path: `/recipe/${recipe.idMeal}` }" custom v-slot="{ navigate }">
-        <button @click="navigate" type="button" role="link" class="btn">view recipe</button>
-      </router-link>
+      <div>
+        <router-link :to="{ path: `/recipe/${recipe.idMeal}` }" custom v-slot="{ navigate }">
+          <button @click="navigate" type="button" role="link" class="btn">view recipe</button>
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
 .card {
   background-color: #fff;
+  width: 100%;
+  max-width: 300px;
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 2fr 1fr;
+  border-radius: 8px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.356);
+
+  &-info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.btn {
+  padding: 0.8rem 1rem;
+  text-transform: capitalize;
+  border: 0;
+  border-radius: 4rem;
+  font-size: 15px;
+  font-weight: 600;
+  color: black;
+  background: #fbd791;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.194);
+}
+
+.recipe-card {
+  background-color: #fff;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
   border-radius: 5px;
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.356);
 }
-.card img {
-  width: 100%;
+
+.recipe-content {
+  display: block;
+}
+
+.recipe-title {
+  color: black;
+}
+
+.recipe-image {
+  width: 300px;
   height: auto;
   border-radius: 5px 0 0 5px;
-}
-.card .btn {
-  position: absolute;
-  bottom: -20px;
-  right: -20px;
-  border: none;
-  outline: none;
-  display: flex;
-  align-items: center;
-  background-color: #fc9400;
-  color: #fff;
-  padding: 22px 45px;
-  font-size: 1rem;
-  text-transform: uppercase;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.294);
-}
-.card .btn i {
-  margin-left: 20px;
-  font-size: 1.5rem;
-}
-
-.container__text {
-  padding: 40px 40px 0;
-}
-.container__text h1 {
-  font-weight: 400;
-}
-
-.container__text p {
-  font-size: 0.9rem;
-}
-.container__text .container__text__timing {
-  display: flex;
-  margin: 20px 0 10px;
-}
-.container__text .container__text__timing .container__text__timing_time {
-  margin-right: 40px;
-}
-.container__text .container__text__timing h2 {
-  margin-bottom: 5px;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #818189;
-}
-.container__text .container__text__timing p {
-  color: #351897;
-  font-weight: bold;
-  font-size: 1.2rem;
 }
 </style>

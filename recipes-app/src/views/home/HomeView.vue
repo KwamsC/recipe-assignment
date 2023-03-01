@@ -42,7 +42,7 @@ import HomeDashboard from './HomeDashboard.vue'
 }
 
 .btn {
-  /* letter-spacing: 1px; */
+  text-transform: capitalize;
   color: var(--white);
   font-weight: 500;
   padding: 13px 30px;
