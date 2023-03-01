@@ -1,5 +1,12 @@
+<script setup>
+import UseRandomRecipe from './UseRandomRecipe'
+
+const { randomRecipe } = UseRandomRecipe()
+
+</script>
+
 <template>
-  <div class="about">
+  <div>
     <h1>Random meal of the day</h1>
     <div class="recipe-card">
       <img :src="randomRecipe.strMealThumb" :alt="randomRecipe.strMeal" class="recipe-image" />
@@ -11,31 +18,7 @@
   </div>
 </template>
 
-<script>
-import UseRecipesView from './UseRecipesView'
-
-export default {
-  // `setup` is a special hook dedicated for composition API.
-  setup() {
-    const { randomRecipe } = UseRecipesView()
-
-    // expose the state to the template
-    return {
-      randomRecipe,
-    }
-  },
-}
-</script>
-
 <style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-
 .recipe-card {
   background-color: #fff;
   width: 100%;

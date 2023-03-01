@@ -1,17 +1,15 @@
 <template>
   <router-link to="/" class="logo">
-    <img class="logo-img" src="@/assets/img/abn-logo.svg" />
+    <img class="logo-img" alt="abn-recipe-logo" src="@/assets/img/abn-logo.svg" />
     <div class="sub-title">
-      <small>Recipes</small>
+      <span>Recipes</span>
     </div>
   </router-link>
 </template>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
-
 .sub-title {
-  font-family: 'Yellowtail';
+  font-family: var(--curlyLogoFont);
   position: absolute;
   justify-self: center;
   transform: rotateY(0deg) rotate(351deg);
@@ -25,7 +23,7 @@
 }
 
 .logo-img {
-  height: 40px;
+  height: 38px;
   width: auto;
 }
 </style>
