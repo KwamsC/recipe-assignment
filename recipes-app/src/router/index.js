@@ -6,29 +6,29 @@ const router = createRouter({
   routes: [
     {
       path: '/:pathMatch(.*)*',
-      redirect: '/404'
+      redirect: '/404',
     },
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
     },
     {
       path: '/recipe/:id',
       name: 'recipe',
-      component: () => import('../views/recipe/RecipeDetail.vue')
+      component: () => import('../views/recipe/RecipeDetail.vue'),
     },
     {
-      path: '/recipes',
-      name: 'recipes',
-      component: () => import('../views/recipes/RecipesView.vue')
+      path: '/random-recipe',
+      name: 'random-recipe',
+      component: () => import('../views/random-recipe/RandomRecipe.vue'),
     },
     {
       path: '/404',
       name: '404',
-      component: () => import('../views/404Page.vue')
-    }
-  ]
+      component: () => import('../views/404Page.vue'),
+    },
+  ],
 })
 
 export default router

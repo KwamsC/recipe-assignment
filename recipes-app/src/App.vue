@@ -1,9 +1,7 @@
 <script setup>
 import { RouterView } from 'vue-router'
-// import HelloWorld from './components/HelloWorld.vue'
-import AppLogo from './components/AppLogo.vue'
-import NavBar from './components/NavBar.vue'
-// import SearchBar from './components/search/SearchBar.vue'
+import AppLogo from './components/app-logo/AppLogo.vue'
+import NavBar from './components/navbar/NavBar.vue'
 </script>
 
 <template>
@@ -13,20 +11,27 @@ import NavBar from './components/NavBar.vue'
       <nav-bar />
     </div>
   </header>
-
-  <router-view />
+  <main>
+    <router-view />
+  </main>
 </template>
 
 <style lang="scss" scoped>
 header.topbar {
-  position: fixed;
+  position: absolute;
   width: 100%;
+  background-color: var(--sand);
+}
+
+main {
+  padding-top: 4rem;
 }
 
 .topbar-container {
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
+  align-items: center;
 }
 
 .hero {
