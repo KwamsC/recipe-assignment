@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+
+:root {
+  --bodyFont: 'Poppins', sans-serif;
+  --curlyLogoFont: 'Yellowtail';
+  --wildWatermelon: #ff4f87;
+  --sand: #FBD791;
+  --fuelYellow: #f0a035;
+  --textColor: #323232;
+  --bodyBg: #d6d6d6;
+  --white: #fff;
+  --black: #000;
+}
