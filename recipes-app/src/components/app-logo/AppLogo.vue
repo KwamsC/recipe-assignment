@@ -1,23 +1,26 @@
 <template>
-  <router-link to="/" class="logo">
-    <img class="logo-img" alt="abn-recipe-logo" src="@/assets/img/abn-logo.svg" />
-    <div class="sub-title">
-      <span>Recipes</span>
-    </div>
-  </router-link>
+  <div class="logo">
+    <router-link to="/">
+      <img class="logo-img" alt="abn-recipe-logo" src="@/assets/img/abn-logo.svg" />
+      <div class="sub-title">
+        <span>Recipes</span>
+      </div>
+    </router-link>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 .sub-title {
   font-family: var(--curlyLogoFont);
-  position: absolute;
+  position: relative;
   justify-self: center;
+  top: -16px;
   transform: rotateY(0deg) rotate(351deg);
   color: black;
 }
 
 .logo {
-  display: grid;
+  display: flex;
   align-items: flex-end;
   justify-self: center;
 }

@@ -9,7 +9,6 @@ module.exports = {
     'plugin:vue/vue3-essential',
     'eslint:recommended',
     '@vue/eslint-config-airbnb',
-    // '@vue/eslint-config-prettier/skip-formatting',
   ],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -19,6 +18,7 @@ module.exports = {
     'import/no-unresolved': 'error',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'no-use-before-define': ['error', { variables: false }],
+    'no-console': 'off',
   },
   settings: {
     ...createAliasSetting({

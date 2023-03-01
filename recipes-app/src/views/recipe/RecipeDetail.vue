@@ -6,7 +6,7 @@ const { recipe, ingredientsWithMeasures } = useRecipeDetail()
 </script>
 
 <template>
-  <section v-if="recipe">
+  <section class="recipe" v-if="recipe">
     <div class="top-grid">
       <div class="recipe-img">
         <img :src="recipe.strMealThumb" :alt="recipe.strMeal" class="recipe-image" />
@@ -30,12 +30,15 @@ const { recipe, ingredientsWithMeasures } = useRecipeDetail()
 </template>
 
 <style lang="scss" scoped>
-  .top-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+.recipe {
+  background-color: #F9F7F1;
+}
+.top-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
-  .container {
-    padding: 2rem 0;
-  }
+.container {
+  padding: 2rem 0;
+}
 </style>
