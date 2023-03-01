@@ -4,32 +4,26 @@ This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Choices
 
-## Customize configuration
+Chosen Vue3 as that is the framework used internally.
+IDE of choice: VS Code
+ESLint
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+In order to run the webapp
+
+```sh
+cd recipes-app && yarn run dev
+```
 
 ## Project Setup
 
 ```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
+yarn
 ```
 
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh
-npm run lint
+yarn run lint
 ```
