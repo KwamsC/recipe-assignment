@@ -14,6 +14,11 @@ export default function useRecipesView() {
     ingredientsWithMeasures.value = [...mapIngredientsToMeasures(recipe.value)]
   })
 
+  /**
+   * This function allows the user to navigate back to the previous page in the browser's history
+   *
+   * @returns {Array<string>} An array of strings containing ingredients and their measures
+  */
   const goBack = () => {
     router.go(-1)
   }
