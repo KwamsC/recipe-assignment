@@ -1,7 +1,9 @@
 <script setup>
 import useRecipeDetail from './useRecipeDetail'
 
-const { recipe, ingredientsWithMeasures, goBack } = useRecipeDetail()
+const {
+  recipe, recipeTags, ingredientsWithMeasures, goBack,
+} = useRecipeDetail()
 
 </script>
 
@@ -15,8 +17,10 @@ const { recipe, ingredientsWithMeasures, goBack } = useRecipeDetail()
         <img :src="recipe.strMealThumb" :alt="recipe.strMeal" class="card-media" />
         <div class="card-body">
           <h2 class="card-title">{{recipe.strMeal}}</h2>
-          <div>
-            {{ recipe.strTags }}
+          <div class="card-tags">
+            <span class="card-tag" v-for="(tag, index) in recipeTags" :key="index">
+              {{ tag }}
+            </span>
           </div>
           <div v-if="recipe.strYoutube">
             <a :href="recipe.strYoutube" target="_blank" rel="noopener noreferrer"> Play instruction video</a>
@@ -48,7 +52,7 @@ const { recipe, ingredientsWithMeasures, goBack } = useRecipeDetail()
   min-height: 100vh;
 }
 .card-container {
-  margin: 3rem auto 0;
+  margin: 0 auto 0;
   max-width: 1000px;
 }
 
@@ -90,6 +94,18 @@ const { recipe, ingredientsWithMeasures, goBack } = useRecipeDetail()
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 1rem
+  }
+
+  &-tags {
+    margin-bottom: 1rem;
+  }
+
+  &-tag {
+    padding: 0.25rem 0.5rem;
+    background: var(--sand);
+    margin-right: 0.5rem;
+    border-radius: 1rem;
+    font-weight: 600;
   }
 }
 

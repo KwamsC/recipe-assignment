@@ -38,10 +38,6 @@ const { input, recipes, search } = useSearchBar()
     border: 1px solid grey;
     min-width: 300px;
   }
-
-  &-list{
-
-  }
 }
 
 .cooking-question {

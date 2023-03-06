@@ -7,8 +7,8 @@ import HomeDashboard from './HomeDashboard.vue'
     <div class="hero container">
       <div class="hero-content">
         <div class="hero-text">
-          <h1><span class="title title-black">Recipe</span> <span class="title title-white">App</span></h1>
-          <div>The surprising recipe app</div>
+          <h1 class="title"><span class="title-black">Recipe</span> <span class="title-white">App</span></h1>
+          <p>The surprising recipe app</p>
         </div>
         <router-link :to="{ name: 'random-recipe' }" custom v-slot="{ navigate }">
           <button @click="navigate" type="button" role="link" class="btn">Surprise recipe</button>
@@ -23,7 +23,7 @@ import HomeDashboard from './HomeDashboard.vue'
 <style lang="scss" scoped>
 .hero {
   display: grid;
-  background-color: #fbd791;
+  background-color: var(--sand);
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
   justify-content: center;
@@ -44,7 +44,7 @@ import HomeDashboard from './HomeDashboard.vue'
 .btn {
   text-transform: capitalize;
   color: var(--white);
-  font-weight: 500;
+  font-weight: 600;
   padding: 13px 30px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.295);
   border: 0;
@@ -57,11 +57,12 @@ import HomeDashboard from './HomeDashboard.vue'
 
 .title {
   text-shadow: 3px 5px 2px rgba(0, 0, 0, 0.102);
+  margin-bottom: 0.5rem;
   &-white {
-    color: white;
+    color: var(--white);
   }
   &-black {
-    color: black;
+    color: var(--black);
   }
 }
 

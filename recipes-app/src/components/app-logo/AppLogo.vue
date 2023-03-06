@@ -1,12 +1,12 @@
 <template>
-  <div class="logo">
-    <router-link to="/">
+  <router-link to="/">
+    <div class="logo">
       <img class="logo-img" alt="abn-recipe-logo" src="@/assets/img/abn-logo.svg" />
       <div class="sub-title">
         <span>Recipes</span>
       </div>
-    </router-link>
-  </div>
+    </div>
+  </router-link>
 </template>
 
 <style lang="scss" scoped>
@@ -23,6 +23,7 @@
   display: flex;
   align-items: flex-end;
   justify-self: center;
+  flex-direction: column;
 }
 
 .logo-img {

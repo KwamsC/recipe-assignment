@@ -11,7 +11,7 @@ defineProps({
   <div class="card">
     <img :src="recipe.strMealThumb" :alt="recipe.strMeal" class="recipe-image" />
     <div class="card-info">
-      <h1>{{ recipe.strMeal }}</h1>
+      <h2 class="card-title">{{ recipe.strMeal }}</h2>
       <div>
         <router-link :to="{ path: `/recipe/${recipe.idMeal}` }" custom v-slot="{ navigate }">
           <button @click="navigate" type="button" role="link" class="btn">view recipe</button>
@@ -27,10 +27,14 @@ defineProps({
   width: 100%;
   max-width: 300px;
   position: relative;
-  display: grid;
-  grid-template-rows: 2fr 1fr;
+  display: flex;
+  flex-direction: column;
   border-radius: 8px;
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.356);
+
+  &-title {
+    margin-bottom: 2rem
+  }
 
   &-info {
     padding: 1rem;

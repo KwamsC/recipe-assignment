@@ -10,9 +10,3 @@ import HeaderBar from './components/header/HeaderBar.vue'
     <router-view />
   </main>
 </template>
-
-<style lang="scss" scoped>
-main {
-  padding-top: 3rem;
-}
-</style>

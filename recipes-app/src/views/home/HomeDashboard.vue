@@ -17,7 +17,7 @@ import SearchBar from '../../components/search/SearchBar.vue'
 
 <style lang="scss" scoped>
 .search-heading{
-  margin-bottom: 20px
+  margin-bottom: 1rem
 }
 .dashboard-content {
   display: grid;

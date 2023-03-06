@@ -19,7 +19,6 @@ const { logout, noHeader } = useHeaderBar()
 
 <style lang="scss" scoped>
 header.topbar {
-  position: absolute;
   width: 100%;
   background-color: var(--sand);
 }

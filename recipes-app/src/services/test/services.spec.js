@@ -2,7 +2,6 @@ import {
   describe, it, expect, vi,
 } from 'vitest'
 import { fetchRandomRecipe, getRecipe, searchRecipe } from '@services/recipe'
-
 import axios from 'axios'
 
 vi.mock('axios')
